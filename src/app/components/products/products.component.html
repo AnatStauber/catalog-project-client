@@ -1,0 +1,23 @@
+
+<div>
+  <table>
+    <tr>
+      <th style="width:350px;"> Item Number  </th>
+      <th style="width:350px;"> Name  </th>
+      <th style="width:200px;">  Quantity in Stock </th>
+      <th style="width:200px;"> Inventory Code </th>
+    </tr>
+
+    <tr *ngFor="let i of allItems">
+      <td> <a routerLink="/one-product/{{i.itemNumber}}"> {{ i.itemNumber}} </a> </td>
+      <td style="font-weight: bold"> {{ i.itemName }}</td>
+      <td> {{ i.itemAmount }}</td>
+      <td> {{ i.inventoryCode }}</td>
+    </tr>
+  </table>
+<br>
+  <div class="a">
+      <a routerLink="/addProduct" >Add a new product > </a>
+    </div>
+</div>
+

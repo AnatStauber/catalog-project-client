@@ -1,0 +1,37 @@
+table, th, td {
+    border: 1px solid gray;
+}
+
+table{
+    margin: 20px auto;
+    text-align: center;
+}
+
+tr:nth-of-type(even) {
+    background-color:lightgrey;
+}
+
+tr:nth-of-type(odd) {
+    background-color: whitesmoke;
+}
+
+tr:first-of-type {
+    background-color:rgb(105, 167, 206);
+    font-size: 20px;
+}
+
+div{
+    height:80%;
+    overflow:auto;
+}
+
+a{ 
+    color: black;
+
+}
+
+.a{
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+}

@@ -1,0 +1,25 @@
+<h1> Add A Product: </h1>
+
+
+<form #myForm="ngForm" (ngSubmit) = "add()">
+
+  <input #itemNumber="ngModel" required type="number" name="itemNumber" [(ngModel)]="item.itemNumber" placeholder="Product Number"> 
+  <span *ngIf="itemNumber.invalid && itemNumber.dirty"> Missing Item Number </span>
+  <br>
+
+  <input #itemName="ngModel" required  type="text" name="itemName" [(ngModel)]="item.itemName" placeholder="Name"> 
+  <span *ngIf="itemName.invalid && itemName.dirty"> Missing Item Name </span>
+  <br>
+
+  <input #itemAmount="ngModel" required min="1" type="number" name="itemAmount" [(ngModel)]="item.itemAmount" placeholder="Quantity"> 
+  <span *ngIf="itemAmount.invalid && itemAmount.dirty"> Missing Amount </span>
+  <span *ngIf="itemAmount<1"> aquantity is illegal.  must be at least 1. </span>
+  <br>
+
+  
+  <input #inventoryCode="ngModel" required type="text" name="inventoryCode" [(ngModel)]="item.inventoryCode" placeholder="Inventory Code"> 
+  <span *ngIf="inventoryCode.invalid && inventoryCode.dirty"> Missing Inventory Code </span>
+  <br>
+  
+  <button [disabled]="myForm.form.invalid"> Add </button>
+</form>

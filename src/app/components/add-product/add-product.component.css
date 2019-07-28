@@ -1,0 +1,19 @@
+form{
+    margin-top: 50px;
+}
+
+input,button{
+    margin: 20px;
+    font-size: large;
+    width: 400px;
+    height: 60px;
+    background-color: lightblue;
+    color: grey;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+button{
+
+    background-color: grey;
+    color:white;
+}

@@ -1,0 +1,23 @@
+<div *ngIf="item">
+  <h3> Item Number: {{item.itemNumber}}</h3>
+  <h3> Name: {{item.itemName}} </h3>
+  <h3> Quantity in Stock: {{item.itemAmount}} </h3>
+  <h3> Inventory Code: {{item.inventoryCode}} </h3>
+  <br><br>
+  <a routerLink="/changeQuantity/{{item.itemNumber}}"> Change Quantity </a>
+  <br><br>
+  <a routerLink="/products"> Back To List </a>
+  <br><br>
+  <button (click)="confirmDelete()"> Delete Product </button>
+</div>
+
+<br><br>
+
+<div *ngIf="!item">
+  <h1> no such item...</h1>
+  <br><br>
+  <a routerLink="/products"> Back To List </a>
+</div>
+
+
+

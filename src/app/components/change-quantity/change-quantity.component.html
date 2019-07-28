@@ -1,0 +1,9 @@
+<form #myForm="ngForm" (ngSubmit) = "changeQuantity()">
+
+    <b> Please Enter a New Quantity:</b>
+    
+    <input #AmountData="ngModel" required min="1" type="number" name="itemAmount" [(ngModel)]="item.itemAmount" placeholder="new Quantity"> 
+    <br>
+    <button [disabled]="myForm.form.invalid"> Update </button>
+  </form>
+  
